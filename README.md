@@ -28,11 +28,11 @@ This Google Apps script allows for calling the Alma POL API and using Google For
 
    f. Create a tab called `locationMapping` with a column for location code and a column for library code.
 
-   ![screenshot from Google Sheets, showing a spreadsheet with two columns of data.](location.png)
+   ![screenshot from Google Sheets, showing a spreadsheet with one column of data.](location.png)
 
    g. Create a tab called `authorizedUsers` with a column of email addresses of users who you are allowing to create POLs using the Google Form.
 
-   ![screenshot from Google Sheets, showing a spreadsheet with two columns of data.](authorization.png)
+   ![screenshot from Google Sheets, showing a spreadsheet with one column of data.](authorization.png)
 
 
 3. Now open the Script Editor under the Tools menu in Sheets, and create a new project (following the relevant instructions [here](https://developers.google.com/apps-script/guides/sheets)). 
@@ -43,4 +43,6 @@ This Google Apps script allows for calling the Alma POL API and using Google For
 
 6. Modify the lines of code mapping variables to cells as needed to ensure that column numbers correspond to the correct columns in the form responses sheet.
 
-7. Now you should be able to run the script either by selecting the `main` function in the Script Editor console or by setting up a [project trigger](https://developers.google.com/apps-script/guides/triggers/).
+7. Set up a [project trigger](https://developers.google.com/apps-script/guides/triggers/) to run the createPol function on form submission.
+
+![screenshot from Google Apps Script, showing a the trigger settings to run the scrips on Google Form submission.](trigger.png)
