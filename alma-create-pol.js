@@ -71,7 +71,8 @@ function createPol() {
       var dataList = data.map(x => x[0])
       var index = dataList.indexOf(searchValue);
       if (index === -1) {
-        var library = "gelman";
+        // owning library --> Insert your default library code here for any locations not mapped in the spreadsheet locationMapping tab
+        var library = "";
       } else {
           var library = data[index][1]
       }
@@ -79,7 +80,8 @@ function createPol() {
       // Creating the REST API json string for submission
       var payloadMain = {
         "owner": {
-          "value": "gelman"
+          // owning library --> Insert your library code here
+          "value": ""
         },
         "type": {
           "value": "PRINTED_BOOK_OT"
